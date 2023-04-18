@@ -23,6 +23,10 @@ int compareFiles(FILE * f1, FILE* f2, int flag){
 }
 
 int main(int argc,char * argv[]) {
+    if(argc<3){
+        printf("please notice the usage:\ncmp <file1> <file2> optional:<-v/-i>\n-v for verbose\n-i for ignore case\n");
+        return 1;
+    }
     int flagV=0;
     int flagI=0;
     char* files[2];

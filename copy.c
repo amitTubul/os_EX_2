@@ -4,7 +4,7 @@
 
 
 // function used to copy f1 to f2
-int copyFile(FILE * f1, FILE* f2){
+int copyFile(FILE * f1, FILE * f2){
     char ch;
     while((ch=(char)fgetc(f1))!=EOF){
         fputc(ch, f2);
@@ -21,21 +21,21 @@ void printState(int ans, int flagV){
 }
 
 int main(int argc,char * argv[]) {
+    if(argc<3){
+        printf("please notice the usage:\ncopy <file1> <file2> optional:<-v/-f>\n-v for verbose\n-f for force copy\n");
+        return 1;
+    }
     int flagV=0;
     int flagF=0;
-    char* files[2];
+    char * files[2]={0};
     int j=0;
     FILE* f1;
     FILE* f2;
-    if(argc<3){
-        printf("please notice the usage:\n");
-
-    }
     // taking care for argv[] arguments at any order
     for (int i = 1; i < argc; ++i) {
         if(strcmp(argv[i],"-v")==0) flagV=1;
         if(strcmp(argv[i],"-f")==0) flagF=1;
-        char* res = strstr(argv[i],".");
+        char * res = strstr(argv[i],".");
         if(res){
             files[j]=argv[i];
             j++;
@@ -46,7 +46,7 @@ int main(int argc,char * argv[]) {
     // in case the file cannot open
     if (f1==NULL) {
         printState(2,flagV);
-        perror("unable to open file1\n");
+        perror("unable to open file");
         return 1;
     }
     // function checks if file is exists
@@ -59,10 +59,11 @@ int main(int argc,char * argv[]) {
     }
     // opening the second file for write only
     f2 = fopen(files[1],"w");
+
     // in case the file cannot open
     if (f2==NULL) {
         printState(2,flagV);
-        perror("unable to open file2\n");
+        perror("unable to open file");
         return 1;
     }
 
