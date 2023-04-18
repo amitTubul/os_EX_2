@@ -29,6 +29,7 @@ int main(int argc,char * argv[]) {
     FILE* f2;
     if(argc<3){
         printf("please notice the usage:\n");
+
     }
     // taking care for argv[] arguments at any order
     for (int i = 1; i < argc; ++i) {
