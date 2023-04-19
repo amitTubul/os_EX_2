@@ -1,7 +1,8 @@
 #include <ctype.h>
 #include <string.h>
 
-void codecA_encode(char *input, char *output) {
+// encoding the input
+void encode(char *input, char *output) {
     for (int i = 0; input[i]; i++) {
         if (islower(input[i]))
             output[i] = toupper(input[i]);
@@ -12,7 +13,7 @@ void codecA_encode(char *input, char *output) {
     }
     output[strlen(input)] = '\0';
 }
-
-void codecA_decode(char *input, char *output) {
-    codecA_encode(input, output);
+// decoding the input
+void decode(char *input, char *output) {
+    encode(input, output);
 }

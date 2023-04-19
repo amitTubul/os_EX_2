@@ -1,37 +1,27 @@
 CC=gcc
 FLAGS=-Wall -fpic -g
 
-cmp.o:cmp.c
-	$(CC) $(FLAGS) -c cmp.c
+all:cmp copy encode decode
 
-cmp:cmp.o
-	$(CC) $(FLAGS) -o cmp cmp.o
+cmp:cmp.c
+	$(CC) $(FLAGS) -o cmp cmp.c
 
-copy.o:copy.c
-	$(CC) $(FLAGS) -c copy.c
+copy:copy.c
+	$(CC) $(FLAGS) -o copy copy.c
 
-copy:copy.o
-	$(CC) $(FLAGS) -o copy copy.o
+libcodecA.so:codecA.c
+	$(CC) -shared -fpic codecA.c -o libcodecA.so
 
-codecA.o:codecA.c
-	$(CC) $(FLAGS) -c codecA.c
-
-libcodecA.so:codecA.o
-	$(CC) -shared -o libcodecA.so codecA.o
-
-codecB.o:codecB.c
-	$(CC) $(FLAGS) -c codecB.c
-
-libcodecB.so:codecB.o
-	$(CC) -shared -o libcodecB.so codecB.o
+libcodecB.so:codecB.c
+	$(CC) -shared -fpic codecB.c -o libcodecB.so
 
 encode:encode.c libcodecA.so libcodecB.so
-	$(CC) -o encode encode.c -L. -lcodecA -lcodecB
+	$(CC) encode.c -L. -lcodecA -lcodecB -o encode -ldl
 
 decode:decode.c libcodecA.so libcodecB.so
-	$(CC) -o decode decode.c -L. -lcodecA -lcodecB
+	$(CC) decode.c -L. -lcodecA -lcodecB -o decode -ldl
 
 clean:
 	rm -f copy cmp encode decode *.o *.so
 
-.PHONY:clean cmp copy encode decode
+.PHONY:clean all cmp copy encode decode

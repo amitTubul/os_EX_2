@@ -27,22 +27,17 @@ int main(int argc,char * argv[]) {
     }
     int flagV=0;
     int flagF=0;
-    char * files[2]={0};
-    int j=0;
+    char* file1=argv[1];
+    char* file2=argv[2];
     FILE* f1;
     FILE* f2;
     // taking care for argv[] arguments at any order
     for (int i = 1; i < argc; ++i) {
         if(strcmp(argv[i],"-v")==0) flagV=1;
         if(strcmp(argv[i],"-f")==0) flagF=1;
-        char * res = strstr(argv[i],".");
-        if(res){
-            files[j]=argv[i];
-            j++;
-        }
     }
     // opening the first file for read only
-    f1 = fopen(files[0],"r");
+    f1 = fopen(file1,"r");
     // in case the file cannot open
     if (f1==NULL) {
         printState(2,flagV);
@@ -50,7 +45,7 @@ int main(int argc,char * argv[]) {
         return 1;
     }
     // function checks if file is exists
-    int fileExist=access(files[1],F_OK);
+    int fileExist=access(file2,F_OK);
     if (fileExist!=-1){// if true, the file exists
         if(flagF!=1) { // if user did not choose "-f"
             printState(1,flagV);
@@ -58,7 +53,7 @@ int main(int argc,char * argv[]) {
         }
     }
     // opening the second file for write only
-    f2 = fopen(files[1],"w");
+    f2 = fopen(file2,"w");
 
     // in case the file cannot open
     if (f2==NULL) {

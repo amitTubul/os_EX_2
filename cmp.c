@@ -29,20 +29,17 @@ int main(int argc,char * argv[]) {
     }
     int flagV=0;
     int flagI=0;
-    char* files[2];
-    int j=0;
+    char* file1=argv[1];
+    char* file2=argv[2];
+    FILE* f1;
+    FILE* f2;
     // taking care for argv[] arguments at any order
     for (int i = 1; i < argc; ++i) {
         if(strcmp(argv[i],"-v")==0) flagV=1;
         if(strcmp(argv[i],"-i")==0) flagI=1;
-        char* res = strstr(argv[i],".");
-        if(res){
-            files[j]=argv[i];
-            j++;
-        }
     }
-    FILE* f1= fopen(files[0],"r");
-    FILE* f2= fopen(files[1],"r");
+    f1= fopen(file1,"r");
+    f2= fopen(file2,"r");
 
     // main prints error whenever file is not on the same directory or if there is no such file
     if(f1==NULL||f2==NULL){
