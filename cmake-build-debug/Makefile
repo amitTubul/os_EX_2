@@ -177,6 +177,30 @@ copy.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex_2_os.dir/build.make CMakeFiles/Ex_2_os.dir/copy.c.s
 .PHONY : copy.c.s
 
+stshell.o: stshell.c.o
+.PHONY : stshell.o
+
+# target to build an object file
+stshell.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex_2_os.dir/build.make CMakeFiles/Ex_2_os.dir/stshell.c.o
+.PHONY : stshell.c.o
+
+stshell.i: stshell.c.i
+.PHONY : stshell.i
+
+# target to preprocess a source file
+stshell.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex_2_os.dir/build.make CMakeFiles/Ex_2_os.dir/stshell.c.i
+.PHONY : stshell.c.i
+
+stshell.s: stshell.c.s
+.PHONY : stshell.s
+
+# target to generate assembly for a file
+stshell.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Ex_2_os.dir/build.make CMakeFiles/Ex_2_os.dir/stshell.c.s
+.PHONY : stshell.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... copy.o"
 	@echo "... copy.i"
 	@echo "... copy.s"
+	@echo "... stshell.o"
+	@echo "... stshell.i"
+	@echo "... stshell.s"
 .PHONY : help
 
 

@@ -1,1 +1,14 @@
-amit tubul
+cmake-build-debug
+CMakeLists.txt
+cmp.c
+codecA.c
+codecB.c
+copy.c
+decode.c
+encode.c
+f1.txt
+f2.txt
+makefile
+stshell
+stshell.c
+task2_v1.1.pdf

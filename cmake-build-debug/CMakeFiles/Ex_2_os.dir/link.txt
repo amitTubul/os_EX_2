@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/Ex_2_os.dir/cmp.c.o CMakeFiles/Ex_2_os.dir/copy.c.o -o Ex_2_os 
+/usr/bin/cc -g CMakeFiles/Ex_2_os.dir/cmp.c.o CMakeFiles/Ex_2_os.dir/copy.c.o CMakeFiles/Ex_2_os.dir/stshell.c.o -o Ex_2_os 
