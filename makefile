@@ -23,6 +23,9 @@ decode:decode.c libcodecA.so libcodecB.so
 
 stshell: stshell.c
 	$(CC) $(FLAGS) -o stshell stshell.c
+
+stshell_test: stshell_test.c
+	$(cc) $(FLAGS) -o stshell_test stshell_test.c
 clean:
 	rm -f copy cmp encode decode stshell *.o *.so
 

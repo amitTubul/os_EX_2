@@ -1,0 +1,8 @@
+drwxrwxr-x 5 itamarq itamarq  4096 Apr 27 18:41 cmake-build-debug
+-rw-rw-r-- 1 itamarq itamarq   130 Apr 27 18:40 CMakeLists.txt
+-rw-rw-r-- 1 itamarq itamarq   138 Apr 27 18:40 f1.txt
+-rw-rw-r-- 1 itamarq itamarq    10 Apr 27 18:40 f2.txt
+-rwxrwxr-x 1 itamarq itamarq 20496 Apr 27 18:40 stshell
+-rwxrwxr-x 1 itamarq itamarq 16312 Apr 28 12:51 stshell_test
+-rw-rw-r-- 1 itamarq itamarq     0 Apr 28 12:51 testfile.txt
+-rw-rw-r-- 1 itamarq itamarq     0 Apr 27 19:00 test.txt
