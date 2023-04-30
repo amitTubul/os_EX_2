@@ -152,6 +152,7 @@ int spawn_proc(int in, int out, struct command *cmd)
     pid_t pid;
     if ((pid = fork()) == 0)
     {
+        signal(SIGINT,SIG_DFL);
         if (in != 0)
         {
             dup2(in, 0);
@@ -203,7 +204,6 @@ void fork_pipes(int n, command **cmds)
             if (!cmds[i]->outputFile) {
                 spawn_proc(in, fd[1], cmds[i]);
                 /* No need for the write end of the pipe, the child will write here.  */
-                // }
                 close(fd[1]);
                 in = fd[0];
             }else if(cmds[i]->isAppendTo){
@@ -224,13 +224,6 @@ void fork_pipes(int n, command **cmds)
         wait(NULL);
     }
     return;
-    /* Last stage of the pipeline - set stdin be the read end of the previous pipe
-       and output to the original file descriptor 1. */
-    // if (in != 0)
-    //   dup2 (in, 0);
-
-    /* Execute the last stage with the current process. */
-    // return execvp (cmds [i]->argv [0], (char * const *)cmds [i]->argv);
 }
 
 int getNumberOfCommands(char *cmd)
@@ -246,20 +239,17 @@ int getNumberOfCommands(char *cmd)
     return counter;
 }
 
-void handleSignit(int sig){
-    printf("\nCtrl + C input detected, exiting the program...\n");
-    exit(0);
-}
+
 
 int main()
 {
     while (1)
     {
+        signal(SIGINT,SIG_IGN);
         char input[1024];
         command *currentCommand;
         char *pipe_cmd;
         char **commandsStr;
-        signal(SIGINT, handleSignit);
         printf("stshell>> ");
         fgets(input, sizeof(input), stdin); // read input command
         input[strlen(input) - 1] = '\0';    // removing \n
@@ -286,7 +276,6 @@ int main()
         {
             currentCommand = (command *)malloc(sizeof(command));
             currentCommand = generateCommand(commandsStr[i]);
-            // printCommand(currentCommand);
             cmds[i] = currentCommand;
         }
         fork_pipes(cmd_idx, cmds);

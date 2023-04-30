@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/235/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/234/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/234/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itamarq/CLionProjects/C/os_EX_2
+CMAKE_SOURCE_DIR = /home/amit/CLionProjects/os_EX_2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/amit/CLionProjects/os_EX_2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Ex_2_os.dir/depend.make
@@ -70,32 +70,32 @@ include CMakeFiles/Ex_2_os.dir/progress.make
 include CMakeFiles/Ex_2_os.dir/flags.make
 
 CMakeFiles/Ex_2_os.dir/cmp.c.o: CMakeFiles/Ex_2_os.dir/flags.make
-CMakeFiles/Ex_2_os.dir/cmp.c.o: /home/itamarq/CLionProjects/C/os_EX_2/cmp.c
+CMakeFiles/Ex_2_os.dir/cmp.c.o: /home/amit/CLionProjects/os_EX_2/cmp.c
 CMakeFiles/Ex_2_os.dir/cmp.c.o: CMakeFiles/Ex_2_os.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex_2_os.dir/cmp.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ex_2_os.dir/cmp.c.o -MF CMakeFiles/Ex_2_os.dir/cmp.c.o.d -o CMakeFiles/Ex_2_os.dir/cmp.c.o -c /home/itamarq/CLionProjects/C/os_EX_2/cmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amit/CLionProjects/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Ex_2_os.dir/cmp.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ex_2_os.dir/cmp.c.o -MF CMakeFiles/Ex_2_os.dir/cmp.c.o.d -o CMakeFiles/Ex_2_os.dir/cmp.c.o -c /home/amit/CLionProjects/os_EX_2/cmp.c
 
 CMakeFiles/Ex_2_os.dir/cmp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex_2_os.dir/cmp.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/itamarq/CLionProjects/C/os_EX_2/cmp.c > CMakeFiles/Ex_2_os.dir/cmp.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/amit/CLionProjects/os_EX_2/cmp.c > CMakeFiles/Ex_2_os.dir/cmp.c.i
 
 CMakeFiles/Ex_2_os.dir/cmp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex_2_os.dir/cmp.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/itamarq/CLionProjects/C/os_EX_2/cmp.c -o CMakeFiles/Ex_2_os.dir/cmp.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/amit/CLionProjects/os_EX_2/cmp.c -o CMakeFiles/Ex_2_os.dir/cmp.c.s
 
 CMakeFiles/Ex_2_os.dir/copy.c.o: CMakeFiles/Ex_2_os.dir/flags.make
-CMakeFiles/Ex_2_os.dir/copy.c.o: /home/itamarq/CLionProjects/C/os_EX_2/copy.c
+CMakeFiles/Ex_2_os.dir/copy.c.o: /home/amit/CLionProjects/os_EX_2/copy.c
 CMakeFiles/Ex_2_os.dir/copy.c.o: CMakeFiles/Ex_2_os.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex_2_os.dir/copy.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ex_2_os.dir/copy.c.o -MF CMakeFiles/Ex_2_os.dir/copy.c.o.d -o CMakeFiles/Ex_2_os.dir/copy.c.o -c /home/itamarq/CLionProjects/C/os_EX_2/copy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/amit/CLionProjects/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Ex_2_os.dir/copy.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/Ex_2_os.dir/copy.c.o -MF CMakeFiles/Ex_2_os.dir/copy.c.o.d -o CMakeFiles/Ex_2_os.dir/copy.c.o -c /home/amit/CLionProjects/os_EX_2/copy.c
 
 CMakeFiles/Ex_2_os.dir/copy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Ex_2_os.dir/copy.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/itamarq/CLionProjects/C/os_EX_2/copy.c > CMakeFiles/Ex_2_os.dir/copy.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/amit/CLionProjects/os_EX_2/copy.c > CMakeFiles/Ex_2_os.dir/copy.c.i
 
 CMakeFiles/Ex_2_os.dir/copy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Ex_2_os.dir/copy.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/itamarq/CLionProjects/C/os_EX_2/copy.c -o CMakeFiles/Ex_2_os.dir/copy.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/amit/CLionProjects/os_EX_2/copy.c -o CMakeFiles/Ex_2_os.dir/copy.c.s
 
 # Object files for target Ex_2_os
 Ex_2_os_OBJECTS = \
@@ -109,7 +109,7 @@ Ex_2_os: CMakeFiles/Ex_2_os.dir/cmp.c.o
 Ex_2_os: CMakeFiles/Ex_2_os.dir/copy.c.o
 Ex_2_os: CMakeFiles/Ex_2_os.dir/build.make
 Ex_2_os: CMakeFiles/Ex_2_os.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Ex_2_os"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/amit/CLionProjects/os_EX_2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable Ex_2_os"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Ex_2_os.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -121,6 +121,6 @@ CMakeFiles/Ex_2_os.dir/clean:
 .PHONY : CMakeFiles/Ex_2_os.dir/clean
 
 CMakeFiles/Ex_2_os.dir/depend:
-	cd /home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/itamarq/CLionProjects/C/os_EX_2 /home/itamarq/CLionProjects/C/os_EX_2 /home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug /home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug /home/itamarq/CLionProjects/C/os_EX_2/cmake-build-debug/CMakeFiles/Ex_2_os.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/amit/CLionProjects/os_EX_2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/amit/CLionProjects/os_EX_2 /home/amit/CLionProjects/os_EX_2 /home/amit/CLionProjects/os_EX_2/cmake-build-debug /home/amit/CLionProjects/os_EX_2/cmake-build-debug /home/amit/CLionProjects/os_EX_2/cmake-build-debug/CMakeFiles/Ex_2_os.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Ex_2_os.dir/depend
 

@@ -1,7 +1,7 @@
 CC=gcc
 FLAGS=-Wall -fpic -g
 
-all:cmp copy encode decode
+all:cmp copy encode decode stshell
 
 cmp:cmp.c
 	$(CC) $(FLAGS) -o cmp cmp.c
@@ -27,4 +27,4 @@ stshell: stshell.c
 clean:
 	rm -f copy cmp encode decode stshell *.o *.so
 
-.PHONY:clean all cmp copy encode decode
+.PHONY:clean all cmp copy encode decode stshell

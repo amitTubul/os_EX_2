@@ -1,4 +1,51 @@
-Part c:
+Task 2 – Linux practice:
+to compile all files, insert "make all" to the terminal
+
+Part A:
+in this part we created two small programs, that fills like a regular CMD tools.
+Tool 1: “cmp”
+the tool compares two files, and return “0” if they are equal, and “1” if not (return an INT).
+The tool supports -v flag for verbose output. By this we mean that the tool will print “equal” or
+“distinct”, in addition to returning the int value.
+The toll supports -i flag, that mean “ignore case” so “AAA” and “aaa” meaning equals
+usage:
+usage (on terminal):
+1. make cmp (compiles cmp.c)
+2. ./cmp <file1> <file2> -v/-i (both flags together optional)
+
+Tool 2: “copy”
+the tool copies a file to another place and/or name.
+The tool returns “0” on success, or “1” on failure (return an INT)
+The tool creates a new file, if it does not exist, but it will not overwrite a file if it do exist.
+the tool supports -v flag, that will output “success” if the file is copied, or “target file exist” if this is
+the case, or “general failure” on some other problem (in addition to the returned INT value).
+The tool supports -f flag (that means force), that allows to overwrite the target file.
+usage (on terminal):
+1. make copy (compiles copy.c)
+2. ./copy <file1> <file2> -v/-f (both flags together optional)
+
+Part B:
+in this part we created 2 coding libraries: libcodecA.so, libcodecB.so.
+also 2 method tools named: encode, decode.
+and also 2 Method:
+Method a, named codecA: covert all lower case chars to upper case, and all upper case to lower case.
+All other chars will remain unchanged.
+Method b, named codecB: convert all chars to the 3-rd next char (adding a number of 3 to the ascii
+val).
+The libraries supports “encode” and “decode” methods.
+the libraries are “reversable”, meaning that if one does “encode” and then “decode, he will
+get the original string.
+
+by the following steps, convert it according to selected library.
+Usage (on terminal):
+1. make decode (compiles decode.c, libcodecA.so, libcodecB.so)
+2. make encode (compiles encode.c, libcodecA.so, libcodecB.so)
+3. encode/decode <codecA/codecB> <message>
+output: encoded/decoded string
+example: “encode codecA aaaBBB” will return “AAAbbb”
+
+
+Part C:
 in this part we created the stshell.c program, which is a unix shell program.
 the program support the operators > for writing to a file and >> for appending to a file.
 The program support pipes with no specific number, as they run and pass informatin a loop from one to another.
@@ -14,3 +61,6 @@ the way the program work is in the following way:
 	b.adjust input and output file discriptors as nessecary.
 	c.fork and execute the command using execvp
 6.return to the main loop and await user input.
+
+
+notice: clean all compiled files using: "make clean"
