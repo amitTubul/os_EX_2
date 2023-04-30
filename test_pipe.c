@@ -6,16 +6,21 @@
 
 int main()
 {
-    int fd[2]; // file descriptors for the read and write ends of the pipe
+    int fd1[2], fd2[2]; // file descriptors for the read and write ends of the pipe
     pid_t pid1, pid2;
     char buffer[20];
 
     // create the pipe
-    if (pipe(fd) == -1) {
+    if (pipe(fd1) == -1) {
         perror("pipe");
         exit(EXIT_FAILURE);
     }
 
+    if (pipe(fd1) == -1) {
+        perror("pipe");
+        exit(EXIT_FAILURE);
+    }
+    
     // fork the first child process
     pid1 = fork();
 

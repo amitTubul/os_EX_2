@@ -91,9 +91,7 @@ int main() {
             token = strtok(NULL, "|");
             i++;
         }
-        if(num_commands > 1){
-            pipeFlag = 1;
-        }
+        
         pipe(pipefd);
         for (int j = 0; j < num_commands; ++j) {
             if (containsAppendTo(commands[j])) {
