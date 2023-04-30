@@ -1,0 +1,16 @@
+Part c:
+in this part we created the stshell.c program, which is a unix shell program.
+the program support the operators > for writing to a file and >> for appending to a file.
+The program support pipes with no specific number, as they run and pass informatin a loop from one to another.
+The program support the command exit to quit the program, and handles Ctrl + C to exit as well.
+
+the way the program work is in the following way:
+1. get user input
+2. seperate input to the different commands by pipes
+3. process each command to match our command struct, containing metadata such as is the command output to a file or not.
+4. add all commands to a commands array.
+5. within a for loop over the commands:
+	a.create pipe
+	b.adjust input and output file discriptors as nessecary.
+	c.fork and execute the command using execvp
+6.return to the main loop and await user input.
