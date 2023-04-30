@@ -1,0 +1,27 @@
+total 236
+-rw-rw-r-- 1 ubuntu ubuntu   130 Apr 30 04:04 CMakeLists.txt
+-rwxrwxr-x 1 ubuntu ubuntu 17112 Apr 30 04:30 a.out
+drwxrwxr-x 5 ubuntu ubuntu  4096 Apr 30 04:04 cmake-build-debug
+-rw-rw-r-- 1 ubuntu ubuntu  1518 Apr 30 04:04 cmp.c
+-rw-rw-r-- 1 ubuntu ubuntu   474 Apr 30 04:04 codecA.c
+-rw-rw-r-- 1 ubuntu ubuntu   374 Apr 30 04:04 codecB.c
+-rw-rw-r-- 1 ubuntu ubuntu  1839 Apr 30 04:04 copy.c
+-rw-rw-r-- 1 ubuntu ubuntu  1548 Apr 30 04:04 decode.c
+-rw-rw-r-- 1 ubuntu ubuntu  1548 Apr 30 04:04 encode.c
+-rw-rw-r-- 1 ubuntu ubuntu   138 Apr 30 04:04 f1.txt
+-rw-rw-r-- 1 ubuntu ubuntu    10 Apr 30 04:04 f2.txt
+-rw-rw-r-- 1 ubuntu ubuntu  1237 Apr 30 04:04 file.txt
+-rw-rw-r-- 1 ubuntu ubuntu   698 Apr 30 04:04 makefile
+-rwxrwxr-x 1 ubuntu ubuntu 20496 Apr 30 04:04 stshell
+-rw-rw-r-- 1 ubuntu ubuntu  1145 Apr 30 04:04 stshell.c
+-rwxrwxr-x 1 ubuntu ubuntu 17312 Apr 30 11:46 stshell_check
+-rw-rw-r-- 1 ubuntu ubuntu  7540 Apr 30 11:49 stshell_check.c
+-rwxrwxr-x 1 ubuntu ubuntu 26776 Apr 30 08:50 stshell_test
+-rw-rw-r-- 1 ubuntu ubuntu  7977 Apr 30 04:49 stshell_test.c
+-rwxrwxr-x 1 ubuntu ubuntu 16824 Apr 30 04:18 stshellcheck
+-rw-rw-r-- 1 ubuntu ubuntu 32301 Apr 30 04:04 task2_v1.1.pdf
+-rw-rw-r-- 1 ubuntu ubuntu     0 Apr 30 04:04 test.txt
+-rw-rw-r-- 1 ubuntu ubuntu     0 Apr 30 11:49 test_file2.txt
+-rwxrwxr-x 1 ubuntu ubuntu 16296 Apr 30 04:04 test_pipe
+-rw-rw-r-- 1 ubuntu ubuntu  2055 Apr 30 04:47 test_pipe.c
+-rw-rw-r-- 1 ubuntu ubuntu   474 Apr 30 04:32 testfile.txt
