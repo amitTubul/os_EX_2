@@ -82,9 +82,6 @@
 		<Unit filename="/home/itamarq/CLionProjects/C/os_EX_2/copy.c">
 			<Option target="Ex_2_os"/>
 		</Unit>
-		<Unit filename="/home/itamarq/CLionProjects/C/os_EX_2/stshell.c">
-			<Option target="Ex_2_os"/>
-		</Unit>
 		<Unit filename="/home/itamarq/CLionProjects/C/os_EX_2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

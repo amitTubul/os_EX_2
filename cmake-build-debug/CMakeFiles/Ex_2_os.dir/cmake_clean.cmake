@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ex_2_os.dir/cmp.c.o.d"
   "CMakeFiles/Ex_2_os.dir/copy.c.o"
   "CMakeFiles/Ex_2_os.dir/copy.c.o.d"
-  "CMakeFiles/Ex_2_os.dir/stshell.c.o"
-  "CMakeFiles/Ex_2_os.dir/stshell.c.o.d"
   "Ex_2_os"
   "Ex_2_os.pdb"
 )

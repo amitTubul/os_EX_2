@@ -93,7 +93,7 @@ char **generateCommandArgs(char *cmdToParse)
         }
         p++;
     }
-    char **args = malloc((argCount + 1) * sizeof(char *)); // add one for NULL terminator
+    char **args = calloc(argCount + 1, sizeof(char *));// add one for NULL terminator
     if (args == NULL)
     {
         perror("Error: memory allocation failed\n");
@@ -106,7 +106,7 @@ char **generateCommandArgs(char *cmdToParse)
         args[i++] = p;
         p = strtok(NULL, " ");
     }
-    args[i] = NULL; // terminate the array with NULL
+    args[argCount] = NULL; // terminate the array with NULL
 
     return args;
 }
@@ -221,7 +221,7 @@ void fork_pipes(int n, command **cmds)
             }
         }
         /* Keep the read end of the pipe, the next child will read from there.  */
-
+        wait(NULL);
     }
     return;
     /* Last stage of the pipeline - set stdin be the read end of the previous pipe
@@ -291,6 +291,27 @@ int main()
         }
         fork_pipes(cmd_idx, cmds);
         wait(NULL);
+        for (int i = 0; i < num_cmds; i++)
+        {
+            if (cmds[i]->outputFile)
+            {
+                free(cmds[i]->outputFile);
+            }
+
+
+            free(cmds[i]->argv);
+            free(cmds[i]);
+        }
+
+        // free command strings in commandsStr array
+        for (int i = 0; i < num_cmds; i++)
+        {
+            free(commandsStr[i]);
+        }
+
+        // free commandsStr and cmds arrays
+        free(commandsStr);
+        free(cmds);
     }
     return 0;
 }

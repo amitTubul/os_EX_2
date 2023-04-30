@@ -3,4 +3,4 @@ project(Ex_2_os C)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(Ex_2_os cmp.c copy.c stshell.c)
+add_executable(Ex_2_os cmp.c copy.c)

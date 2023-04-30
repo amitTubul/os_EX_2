@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/itamarq/CLionProjects/C/os_EX_2/cmp.c" "CMakeFiles/Ex_2_os.dir/cmp.c.o" "gcc" "CMakeFiles/Ex_2_os.dir/cmp.c.o.d"
   "/home/itamarq/CLionProjects/C/os_EX_2/copy.c" "CMakeFiles/Ex_2_os.dir/copy.c.o" "gcc" "CMakeFiles/Ex_2_os.dir/copy.c.o.d"
-  "/home/itamarq/CLionProjects/C/os_EX_2/stshell.c" "CMakeFiles/Ex_2_os.dir/stshell.c.o" "gcc" "CMakeFiles/Ex_2_os.dir/stshell.c.o.d"
   )
 
 # Targets to which this target links.
